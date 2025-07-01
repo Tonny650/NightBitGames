@@ -1,11 +1,36 @@
 ---
-import Welcome from '../components/Welcome.astro';
-import Layout from '../layouts/Layout.astro';
-
-// Welcome to Astro! Wondering what to do next? Check out the Astro documentation at https://docs.astro.build
-// Don't want to use any of this? Delete everything in this file, the `assets`, `components`, and `layouts` directories, and start fresh.
+import Layout from "../layouts/Layout.astro";
+import logo from "../assets/BlackLogoNoBG.svg";
+import Navbar from "../components/Navbar.astro";
+const banner = "https://picsum.photos/2000/850";
 ---
 
 <Layout>
-	<Welcome />
+  <div class="bg-black min-h-screen flex flex-col">
+    <Navbar />
+    <div class="relative w-full h-160">
+      <img src={banner} alt="gameplay" class="w-full h-full object-cover" />
+      <div
+        class="absolute inset-0 bg-[linear-gradient(to_top,_black_5%,_transparent_20%)]"
+      >
+      </div>
+      <div
+        class="absolute inset-0 flex flex-col items-center justify-center z-20"
+      >
+        <img src={logo.src} class="h-50 mb-5" alt="NightBit Logo" />
+        <p class="text-white text-4xl font-semibold font-[lexend] mb-3">
+          NightBit Games
+        </p>
+        <p class="text-white text-m mb-8">Developing incredible experiences</p>
+        <div></div>
+      </div>
+    </div>
+    <div class="justify-center items-center w-full flex">
+      <footer>
+        <p class="font-[lexend] font-normal text-s text-white">
+          © 2025 NightBit Games
+        </p>
+      </footer>
+    </div>
+  </div>
 </Layout>

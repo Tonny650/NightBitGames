@@ -12,12 +12,14 @@
       --text: #ffffff;
       --muted: #bbbbbb;
       --accent: #6a5acd;
+      --highlight: #ffcc00;
     }
 
     * {
       margin: 0;
       padding: 0;
       box-sizing: border-box;
+      scroll-behavior: smooth;
     }
 
     body {
@@ -28,11 +30,14 @@
 
     header {
       display: flex;
-      align-items: center;
       justify-content: space-between;
+      align-items: center;
       padding: 1rem 2rem;
       background-color: #1a1a1a;
       border-bottom: 1px solid #333;
+      position: sticky;
+      top: 0;
+      z-index: 1000;
     }
 
     .logo {
@@ -48,7 +53,6 @@
     .logo h1 {
       font-size: 1.5rem;
       font-weight: 800;
-      color: var(--text);
     }
 
     nav a {
@@ -65,12 +69,12 @@
 
     .hero {
       text-align: center;
-      padding: 4rem 2rem;
+      padding: 5rem 2rem;
       background: linear-gradient(to right, #1a1a1a, #222);
     }
 
     .hero h2 {
-      font-size: 2.5rem;
+      font-size: 2.8rem;
       margin-bottom: 1rem;
     }
 
@@ -80,8 +84,8 @@
     }
 
     .section {
-      max-width: 1000px;
-      margin: 3rem auto;
+      max-width: 1100px;
+      margin: 4rem auto;
       padding: 0 1rem;
     }
 
@@ -95,37 +99,60 @@
       display: flex;
       flex-wrap: wrap;
       justify-content: center;
-      gap: 1.5rem;
+      gap: 2rem;
     }
 
     .game-card {
       background-color: var(--card);
       border-radius: 12px;
       padding: 1rem;
-      width: 260px;
-      transition: transform 0.2s, box-shadow 0.3s;
+      width: 280px;
+      text-align: center;
+      position: relative;
+      transition: transform 0.3s, box-shadow 0.3s;
     }
 
     .game-card:hover {
-      transform: translateY(-5px);
-      box-shadow: 0 6px 20px rgba(0, 0, 0, 0.4);
+      transform: translateY(-6px);
+      box-shadow: 0 6px 24px rgba(0, 0, 0, 0.5);
     }
 
     .game-card img {
       width: 100%;
       border-radius: 8px;
-      margin-bottom: 0.75rem;
+      margin-bottom: 1rem;
+    }
+
+    .badge {
+      position: absolute;
+      top: 12px;
+      left: 12px;
+      background-color: var(--highlight);
+      color: #000;
+      padding: 4px 10px;
+      font-size: 0.75rem;
+      font-weight: 700;
+      border-radius: 6px;
     }
 
     .game-card h3 {
       font-size: 1.2rem;
       color: var(--accent);
-      margin-bottom: 0.3rem;
     }
 
     .game-card p {
       font-size: 0.95rem;
       color: var(--muted);
+    }
+
+    .about,
+    .contact {
+      text-align: center;
+      max-width: 800px;
+      margin: 0 auto;
+      color: var(--muted);
+      font-size: 1rem;
+      line-height: 1.6;
     }
 
     footer {
@@ -138,21 +165,31 @@
     }
 
     @media (max-width: 768px) {
-      header {
-        flex-direction: column;
-        gap: 1rem;
-      }
-
       .game-card {
         width: 90%;
+      }
+
+      .hero h2 {
+        font-size: 2.2rem;
+      }
+
+      nav {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+      }
+
+      nav a {
+        margin: 0.5rem 0;
       }
     }
   </style>
 </head>
 <body>
+
   <header>
     <div class="logo">
-      <img src="TinyBitLogo.png" alt="NightBit">
+      <img src="TinyBitLogo.png" alt="Logo">
       <h1>NightBit Games</h1>
     </div>
     <nav>
@@ -163,38 +200,47 @@
   </header>
 
   <section class="hero">
-    <h2>Creando experiencias increíbles</h2>
-    <p>Explora mundos asombrosos en cada juego que desarrollamos.</p>
+    <h2>Creando experiencias inolvidables</h2>
+    <p>Desarrollamos videojuegos con alma, técnica y pasión.</p>
   </section>
 
   <section class="section" id="games">
     <h2>Nuestros Juegos</h2>
     <div class="game-list">
       <div class="game-card">
+        <span class="badge">En desarrollo</span>
         <img src="Tleicxiotl.png" alt="Tleicxiotl">
         <h3>Tleicxiotl</h3>
-        <p>Un juego de aventura inmersiva con ambientación mesoamericana.</p>
+        <p>Una aventura épica inspirada en culturas mesoamericanas. Disponible próximamente.</p>
       </div>
     </div>
   </section>
 
   <section class="section" id="about">
     <h2>Sobre Nosotros</h2>
-    <p style="text-align:center; max-width: 700px; margin: 0 auto;">
-      Somos un estudio independiente apasionado por crear videojuegos inmersivos con alto nivel técnico y artístico.
-      Utilizamos Godot .NET, arquitecturas modulares y un enfoque AAA para brindarte experiencias inolvidables.
-    </p>
+    <div class="about">
+      <p>
+        NightBit Games es un estudio independiente que busca ofrecer experiencias de juego únicas,
+        combinando tecnología de vanguardia con narrativa envolvente. Creamos con pasión usando Godot y C#, y buscamos innovar con cada proyecto.
+      </p>
+    </div>
   </section>
 
   <section class="section" id="contact">
     <h2>Contacto</h2>
-    <p style="text-align:center; max-width: 700px; margin: 0 auto;">
-      ¿Quieres colaborar o probar nuestros juegos? Escríbenos a <strong>Afigueroav35@gmail.com</strong>
-    </p>
+    <div class="contact">
+      <p>¿Quieres colaborar con nosotros o saber más?</p>
+      <p>Escríbenos a: <strong>afigueroav35@gmail.com</strong></p>
+    </div>
   </section>
 
   <footer>
-    <p>© 2025 NightBit Games | Desarrollado con ❤️ y Godot</p>
+    <p>© 2025 NightBit Games. Todos los derechos reservados.</p>
   </footer>
+
+  <script>
+    // Funcionalidad futura si deseas agregar efectos de scroll, animaciones, sliders, etc.
+    console.log("Landing multisección lista 🚀");
+  </script>
 </body>
 </html>

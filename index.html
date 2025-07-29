@@ -4,6 +4,7 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>NightBit Games</title>
+  <link rel="icon" href="TinyBitLogoR.png">
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&display=swap" rel="stylesheet">
   <style>
     :root {
@@ -55,9 +56,14 @@
       font-weight: 800;
     }
 
+    nav {
+      display: flex;
+      align-items: center;
+      gap: 1.5rem;
+    }
+
     nav a {
       color: var(--muted);
-      margin-left: 1.5rem;
       text-decoration: none;
       font-weight: 600;
       transition: color 0.3s;
@@ -65,6 +71,15 @@
 
     nav a:hover {
       color: var(--accent);
+    }
+
+    .menu-toggle {
+      display: none;
+      font-size: 1.5rem;
+      color: var(--text);
+      background: none;
+      border: none;
+      cursor: pointer;
     }
 
     .hero {
@@ -165,18 +180,24 @@
     }
 
     @media (max-width: 768px) {
-      .game-card {
-        width: 90%;
-      }
-
-      .hero h2 {
-        font-size: 2.2rem;
+      .menu-toggle {
+        display: block;
       }
 
       nav {
-        display: flex;
+        display: none;
         flex-direction: column;
-        align-items: center;
+        background-color: #1a1a1a;
+        position: absolute;
+        top: 70px;
+        right: 20px;
+        padding: 1rem;
+        border-radius: 10px;
+        box-shadow: 0 5px 20px rgba(0,0,0,0.6);
+      }
+
+      nav.open {
+        display: flex;
       }
 
       nav a {
@@ -192,7 +213,8 @@
       <img src="TinyBitLogo.png" alt="Logo">
       <h1>NightBit Games</h1>
     </div>
-    <nav>
+    <button class="menu-toggle" onclick="toggleMenu()">☰</button>
+    <nav id="mobile-menu">
       <a href="#games">Juegos</a>
       <a href="#about">Nosotros</a>
       <a href="#contact">Contacto</a>
@@ -239,8 +261,10 @@
   </footer>
 
   <script>
-    // Funcionalidad futura si deseas agregar efectos de scroll, animaciones, sliders, etc.
-    console.log("Landing multisección lista 🚀");
+    function toggleMenu() {
+      document.getElementById('mobile-menu').classList.toggle('open');
+    }
   </script>
+
 </body>
 </html>

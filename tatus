@@ -1,0 +1,47 @@
+[33mcommit 70aef49bc607a7cf1753f71f7c440509a47d7c62[m[33m ([m[1;36mHEAD[m[33m -> [m[1;32mdevelop[m[33m, [m[1;31morigin/develop[m[33m)[m
+Author: Alejandro Nava <Tochtlinavadev@gmail.com>
+Date:   Wed Jun 25 20:18:32 2025 -0600
+
+    feat(Navbar): added layout and buttons
+
+[33mcommit 0ea8b214f5f587242d1c2aaa3763ae08ae08c2a2[m[33m ([m[1;31morigin/main[m[33m, [m[1;31morigin/HEAD[m[33m, [m[1;32mmain[m[33m)[m
+Author: Antonio <96596929+Tonny650@users.noreply.github.com>
+Date:   Wed Jun 25 15:21:57 2025 -0600
+
+    Create CNAME
+
+[33mcommit d9df0f8b7422e43d8486d4cd4f8ee0049ea8da73[m
+Author: Antonio <96596929+Tonny650@users.noreply.github.com>
+Date:   Wed Jun 25 15:21:43 2025 -0600
+
+    Delete CNAME
+
+[33mcommit be3d40f01d0127cb1608c39ee631ef4145df8555[m
+Author: Antonio <96596929+Tonny650@users.noreply.github.com>
+Date:   Wed Jun 25 14:57:51 2025 -0600
+
+    Create CNAME
+
+[33mcommit 0808ac9a85335cc330d85520154daf380a97ad5f[m
+Author: Antonio <96596929+Tonny650@users.noreply.github.com>
+Date:   Wed Jun 25 14:56:10 2025 -0600
+
+    Delete CNAME
+
+[33mcommit 4560b24dfe77a73d2e3f21013bfa673a81251837[m
+Author: Antonio <96596929+Tonny650@users.noreply.github.com>
+Date:   Wed Jun 25 14:42:43 2025 -0600
+
+    Create CNAME
+
+[33mcommit 2f3fce74d9464325be16778bef7f6f0edefc596c[m
+Author: Antonio <96596929+Tonny650@users.noreply.github.com>
+Date:   Wed Jun 25 14:37:16 2025 -0600
+
+    chore: Initial commit
+
+[33mcommit 765b1396459da7b2c498a467a0c33d1e4ef1e2e9[m
+Author: Antonio <96596929+Tonny650@users.noreply.github.com>
+Date:   Wed Jun 25 14:26:38 2025 -0600
+
+    Initial commit

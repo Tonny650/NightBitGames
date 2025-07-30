@@ -1,0 +1,30 @@
+---
+import BaseHead from '../components/BaseHead.astro';
+import Footer from '../components/Footer.astro';
+import Header from '../components/Header.astro';
+import { SITE_DESCRIPTION, SITE_TITLE } from '../consts';
+---
+
+<!doctype html>
+<html lang="en">
+	<head>
+		<BaseHead title={SITE_TITLE} description={SITE_DESCRIPTION} />
+	</head>
+	<body>
+		<Header />
+		<main>
+			<div class="logo-base">
+				<img src="../favicon.svg" alt="Bitty" class="logo"/>
+			</div>
+			<div class="logo-base">
+			<h1>NightBit Games</h1>
+			</div>
+			<div class="logo-base">
+			<p>
+				We make games.
+			</p>
+			</div>
+		</main>
+		<Footer />
+	</body>
+</html>
